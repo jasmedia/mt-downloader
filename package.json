@@ -33,7 +33,7 @@
     },
     "homepage": "https://github.com/jasmedia/mt-downloader#readme",
     "publishConfig": {
-        "registry": "https://npm.pkg.github.com/"
+        "registry": "https://npm.pkg.github.com/@jasmedia"
     },
     "dependencies": {
         "async": "0.2.x",

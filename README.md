@@ -2,7 +2,7 @@ NOTE: This is an modified version of the original mt-downloader code.
 
 This codebase enhances upon the original work with the following:
 
-##Features
+## Features
 
 1. **HTTP & HTTPS downloads work:** Working download for both protocols. Refer to code examples below.
 
@@ -14,7 +14,7 @@ This codebase enhances upon the original work with the following:
 
 5. **Stop and start from the last downloaded byte:**. You don't have to worry about internet getting disconnected or your computer shutting down while downloading. You can quite easily start from the last byte that was downloaded.
 
-##Installation
+## Installation
 
 The conventional npm installation process needs to be followed.
 
@@ -25,7 +25,8 @@ $ npm install @jasmedia/mt-downloader --save-dev
 ##.mtd file
 Once the download starts the library will create a file with a **.mtd** extension. This file contains some meta information related to the download and is a little bigger _(around 10kb)_ than the original download size. The **.mtd** file can be used later to restart downloads from where the last byte that was downloaded. After the download is completed the downloader will truncate the file to remove that meta data.
 
-##New-Downloads
+## New-Downloads
+
 When you want to start a new download you just need to provide a download url and a download path and call the `start()` method.
 
 ```javascript
@@ -43,7 +44,8 @@ var downloader = new mtd(file_path, target_url);
 downloader.start();
 ```
 
-##Re-Downloads
+## Re-Downloads
+
 If you want to restart a download from where it left off. You just need to provide the path of the **.mtd** file.
 
 ```javascript
@@ -59,7 +61,8 @@ var downloader = new mtd(file_path);
 downloader.start();
 ```
 
-##Download Options
+## Download Options
+
 A set of custom options can be sent to control the way a download is performed.
 
 ```javascript
@@ -95,7 +98,8 @@ var options = {
 };
 ```
 
-##_onStart_ Callback
+## _onStart_ Callback
+
 The onStart method is called with some meta data. The main components are as follows -
 
 1. **url:** As we learnt from above that we don't need to provide a url parameter to start a download from .mtd file. So this is particularly useful when you want to know the url of a file which is getting downloaded from a .mtd file.
@@ -106,7 +110,8 @@ The onStart method is called with some meta data. The main components are as fol
 
 4. **headers:** You can get all the http Headers of the download in case you want to use them. For instance, you might want to use the **Content-Disposition** header to get the name of the downloaded file.
 
-##_threads_ Meta
+## _threads_ Meta
+
 The `onStart` callback return a **threads** object which stores all the information related to the download threads. This vital object is available of consumption for other libraries. With this object you can retrieve all kinds of information related to the download status of the file.
 
 Each thread has a **connection** key which shows its downloading status, namely -
