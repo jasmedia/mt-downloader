@@ -19,7 +19,7 @@ This codebase enhances upon the original work with the following:
 The conventional npm installation process needs to be followed.
 
 ```bash
-$ npm install @jasmedia/mt-downloader --save-dev
+$ npm install @jasmedia/mt-downloader
 ```
 
 ##.mtd file
